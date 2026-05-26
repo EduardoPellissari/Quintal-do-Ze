@@ -34,10 +34,10 @@ window.TEXTOS = {
     senha: 'Senha',
     botaoEntrar: 'Entrar',
     acessosTitulo: 'Acessos iniciais',
-    acessoAdmin: 'Admin: admin@quintaldoze.local / 123456',
-    acessoGarcom: 'Garçom: garcom@quintaldoze.local / 123456',
-    acessoCozinha: 'Cozinha: cozinha@quintaldoze.local / 123456',
-    acessoCaixa: 'Caixa: caixa@quintaldoze.local / 123456',
+    acessoAdmin: 'Admin: admin@quintaldoze.local / quintaldoze123',
+    acessoGarcom: 'Garçom: garcom@quintaldoze.local / quintaldoze123',
+    acessoCozinha: 'Cozinha: cozinha@quintaldoze.local / quintaldoze123',
+    acessoCaixa: 'Caixa: caixa@quintaldoze.local / quintaldoze123',
   },
 
   admin: {

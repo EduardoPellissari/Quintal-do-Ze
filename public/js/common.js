@@ -154,8 +154,25 @@ function setupNav(items) {
     .join('');
 }
 
+function applyMobileLayoutClass() {
+  const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 0;
+  const screenWidth = Number(window.screen?.width || 0);
+  const screenHeight = Number(window.screen?.height || 0);
+  const smallestScreenSide = Math.min(screenWidth || viewportWidth, screenHeight || viewportWidth);
+  const coarsePointer = !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+
+  // iPhone/iPad podem reportar viewport "desktop" em alguns cenários.
+  const touchDeviceWithWideViewport = coarsePointer && smallestScreenSide <= 1366;
+  const shouldUseMobileLayout = viewportWidth <= 1100 || touchDeviceWithWideViewport;
+
+  document.documentElement.classList.toggle('mobile-layout', shouldUseMobileLayout);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
+  applyMobileLayoutClass();
+  window.addEventListener('resize', applyMobileLayoutClass, { passive: true });
+  window.addEventListener('orientationchange', applyMobileLayoutClass);
+
   const sidebar = document.querySelector('.sidebar');
   if (!sidebar) return;
 

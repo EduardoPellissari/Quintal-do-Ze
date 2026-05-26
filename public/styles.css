@@ -1959,3 +1959,114 @@ textarea {
 .danger-outline:hover {
   background: rgba(255, 74, 74, 0.12) !important;
 }
+
+/* ==================================================
+   CORREÇÃO MOBILE ROBUSTA (ADMIN / USUÁRIOS / PRODUTOS)
+   ================================================== */
+.app-shell > .sidebar,
+.app-shell > main,
+.admin-layout,
+.admin-layout > .panel,
+.table-wrap {
+  min-width: 0;
+}
+
+html.mobile-layout .app-shell {
+  display: block;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+html.mobile-layout .sidebar {
+  width: 100%;
+  position: relative;
+  top: auto;
+  height: auto;
+  min-height: auto;
+  border-right: 0;
+  border-bottom: 1px solid #252525;
+  padding: 14px;
+  gap: 12px;
+  background-position: center top;
+}
+
+html.mobile-layout nav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 0 6px;
+}
+
+html.mobile-layout nav button,
+html.mobile-layout nav a {
+  width: auto;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 10px 12px;
+}
+
+html.mobile-layout #logout {
+  width: 100%;
+  margin-top: 4px;
+}
+
+html.mobile-layout .dev-sidebar {
+  display: none;
+}
+
+html.mobile-layout main {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+}
+
+html.mobile-layout .topbar {
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+html.mobile-layout .user-pill {
+  width: 100%;
+}
+
+html.mobile-layout .dashboard-cards,
+html.mobile-layout .admin-form-grid,
+html.mobile-layout .form-row,
+html.mobile-layout .g2,
+html.mobile-layout .g3,
+html.mobile-layout .g4 {
+  grid-template-columns: 1fr;
+}
+
+html.mobile-layout .panel,
+html.mobile-layout .card,
+html.mobile-layout .admin-form-large,
+html.mobile-layout .admin-list-box {
+  padding: 14px;
+  border-radius: 18px;
+}
+
+html.mobile-layout .admin-form-head,
+html.mobile-layout .form-actions-row {
+  flex-direction: column;
+}
+
+html.mobile-layout .form-actions-row .primary,
+html.mobile-layout .form-actions-row .soft,
+html.mobile-layout .actions button {
+  width: 100%;
+  min-width: 0;
+}
+
+html.mobile-layout .table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+html.mobile-layout .table {
+  min-width: 620px;
+}
