@@ -12,10 +12,10 @@ setText('loginEmailLabel', txt('login.email', 'E-mail'));
 setText('loginPasswordLabel', txt('login.senha', 'Senha'));
 setText('loginButton', txt('login.botaoEntrar', 'Entrar'));
 setText('loginAccessTitle', txt('login.acessosTitulo', 'Acessos iniciais'));
-setText('loginAccessAdmin', txt('login.acessoAdmin', 'Admin: admin@quintaldoze.local / 123456'));
-setText('loginAccessGarcom', txt('login.acessoGarcom', 'Garçom: garcom@quintaldoze.local / 123456'));
-setText('loginAccessCozinha', txt('login.acessoCozinha', 'Cozinha: cozinha@quintaldoze.local / 123456'));
-setText('loginAccessCaixa', txt('login.acessoCaixa', 'Caixa: caixa@quintaldoze.local / 123456'));
+setText('loginAccessAdmin', txt('login.acessoAdmin', 'Admin: admin@quintaldoze.local / quintaldoze123'));
+setText('loginAccessGarcom', txt('login.acessoGarcom', 'Garçom: garcom@quintaldoze.local / quintaldoze123'));
+setText('loginAccessCozinha', txt('login.acessoCozinha', 'Cozinha: cozinha@quintaldoze.local / quintaldoze123'));
+setText('loginAccessCaixa', txt('login.acessoCaixa', 'Caixa: caixa@quintaldoze.local / quintaldoze123'));
 
 document.getElementById('loginForm').addEventListener('submit', async (event) => {
   event.preventDefault();

@@ -22,6 +22,15 @@
   box-sizing:border-box
 }
 
+html,
+body {
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%
+}
+
 body {
   margin:0;
   font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
@@ -67,6 +76,7 @@ button {
 
 .login-modern-body {
   min-height:100vh;
+  min-height:100dvh;
   overflow:auto;
   background:#080808
 }
@@ -90,6 +100,7 @@ button {
 
 .login-modern-screen {
   min-height:100vh;
+  min-height:100dvh;
   display:grid;
   place-items:center;
   padding:28px
@@ -231,13 +242,15 @@ button {
 .app-shell {
   display:grid;
   grid-template-columns:290px 1fr;
-  min-height:100vh
+  min-height:100vh;
+  min-height:100dvh
 }
 
 .sidebar {
   position: sticky;
   top: 0;
   height: 100vh;
+  min-height: 100dvh;
 
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.439), rgb(0, 0, 0)),
@@ -829,11 +842,16 @@ textarea {
 
 @media(max-width:900px) {
   .login-modern-card {
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
+    padding:18px;
+    gap:16px;
+    border-radius:24px
   }
 
   .login-brand-area {
-    min-height:300px
+    min-height:280px;
+    padding:22px;
+    border-radius:20px
   }
 
   .app-shell {
@@ -842,7 +860,28 @@ textarea {
 
   .sidebar {
     position:relative;
-    height:auto
+    height:auto;
+    min-height:auto;
+    padding:16px;
+    gap:16px
+  }
+
+  main {
+    padding:16px
+  }
+
+  .logo-row img {
+    width:52px;
+    height:52px;
+    border-radius:14px
+  }
+
+  .form-row {
+    grid-template-columns:1fr
+  }
+
+  .user-pill {
+    width:100%
   }
 
   .g2,.g3,.g4,.dashboard-cards,.kitchen-metrics {
@@ -871,6 +910,97 @@ textarea {
   }
 
   
+}
+
+@media(max-width:640px) {
+  .login-modern-screen {
+    padding:12px
+  }
+
+  .login-modern-card {
+    padding:12px;
+    gap:12px;
+    border-radius:20px
+  }
+
+  .login-brand-area {
+    min-height:220px;
+    padding:18px;
+    border-radius:16px
+  }
+
+  .login-brand-area img {
+    width:72px;
+    height:72px;
+    border-radius:16px
+  }
+
+  .login-brand-area h1 {
+    font-size:clamp(30px,10vw,42px);
+    letter-spacing:-1px
+  }
+
+  .login-brand-area p {
+    font-size:14px
+  }
+
+  .login-modern-form {
+    padding:18px;
+    border-radius:18px
+  }
+
+  .login-modern-form h2 {
+    font-size:24px
+  }
+
+  .login-modern-form input {
+    height:48px
+  }
+
+  .login-modern-button {
+    height:50px
+  }
+
+  main {
+    padding:12px
+  }
+
+  .topbar h2 {
+    font-size:24px
+  }
+
+  .panel,
+  .card {
+    padding:14px;
+    border-radius:18px
+  }
+
+  .actions button {
+    width:100%
+  }
+
+  .table {
+    min-width:560px
+  }
+
+  .kitchen-card h2 {
+    font-size:32px
+  }
+
+  .kitchen-column {
+    padding:10px;
+    border-radius:16px
+  }
+
+  #toast {
+    left:12px;
+    right:12px;
+    bottom:12px
+  }
+
+  .dev-footer {
+    display:none
+  }
 }
 
 @media print {
