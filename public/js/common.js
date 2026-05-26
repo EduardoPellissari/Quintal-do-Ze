@@ -173,6 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', applyMobileLayoutClass, { passive: true });
   window.addEventListener('orientationchange', applyMobileLayoutClass);
 
+  const appShell = document.querySelector('.app-shell');
+  if (appShell) {
+    document.body.classList.add('app-layout');
+  } else {
+    document.body.classList.remove('app-layout');
+  }
+
   const sidebar = document.querySelector('.sidebar');
   if (!sidebar) return;
 

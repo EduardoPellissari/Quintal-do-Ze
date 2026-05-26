@@ -267,6 +267,24 @@ button {
   gap: 22px;
 }
 
+html:not(.mobile-layout) body.app-layout {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+html:not(.mobile-layout) body.app-layout .app-shell {
+  height: 100%;
+  min-height: 0;
+}
+
+html:not(.mobile-layout) body.app-layout .sidebar {
+  height: 100%;
+  min-height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
 .logo-row {
   display:flex;
   align-items:center;
@@ -343,6 +361,12 @@ nav a:hover {
 main {
   padding:24px;
   min-width:0
+}
+
+html:not(.mobile-layout) body.app-layout main {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .topbar {
