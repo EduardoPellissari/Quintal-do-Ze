@@ -46,7 +46,7 @@ window.TEXTOS = {
       subtitulo: 'Gerencie usuários e acessos do sistema.',
       cardUsuarios: 'Usuários cadastrados',
       cardPerfis: 'Perfis do sistema',
-      cardServidor: 'Servidor local',
+      cardServidor: 'Servidor',
       formNovo: 'Adicionar usuário',
       formEditar: 'Editar usuário',
       formDescricao: 'Cadastre, edite e organize os acessos do sistema por função.',
