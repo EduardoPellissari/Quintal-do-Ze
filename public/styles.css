@@ -1723,7 +1723,7 @@ textarea {
   width: 100%;
   text-align: center;
   font-size: 12px;
-  color: var(--navy);
+  color: var(--muted);
   opacity: 0.7;
   pointer-events: none;
 }
@@ -1736,7 +1736,7 @@ textarea {
   margin-top: auto;
   padding: 16px 10px 0;
   font-size: 15px;
-  color: var(--navy);
+  color: var(--muted);
   text-align: center;
   opacity: 1.0;
 }
